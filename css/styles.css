@@ -11265,3 +11265,9 @@ body {
 .footer {
   padding: 5rem 0;
 }
+
+/*additional styles*/
+
+.vertical-center{
+  padding-bottom: 2rem;
+}
