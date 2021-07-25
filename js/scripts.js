@@ -97,7 +97,7 @@ function submitToAPI(e) {
           // clear form and show a success message
           alert("Appointment Set! We will get in touch soon. Thank you");
           document.getElementById("contact-form").reset();
-        location.reload();
+          location.reload();
         },
         error: function () {
           // show an error message

@@ -11271,3 +11271,11 @@ body {
 .vertical-center{
   padding-bottom: 2rem;
 }
+
+.margin-bot{ 
+  margin-bottom: 1rem;
+  width: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
