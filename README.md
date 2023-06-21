@@ -1,2 +1,1 @@
-# tatzandpirz
-for my tattoo site
+for tattoo site
