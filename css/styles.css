@@ -11109,7 +11109,7 @@ body {
   border: 0;
 }
 
-.masthead {
+.masthead1 {
   position: relative;
   width: 100%;
   height: auto;
@@ -11121,11 +11121,38 @@ body {
   background-attachment: scroll;
   background-size: cover;
 }
+
+.masthead2 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 35rem;
+  padding: 15rem 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/saltbae.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.masthead3 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 35rem;
+  padding: 15rem 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/piercingbg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
 .masthead h1, .masthead .h1 {
   font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 2.5rem;
-  line-height: 2.5rem;
-  letter-spacing: 0.8rem;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.5rem;
   background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -11207,7 +11234,7 @@ body {
 }
 
 .signup-section {
-  padding: 10rem 0;
+  padding: 5rem 0;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000 100%), url("../assets/img/bg-signup.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -11270,4 +11297,12 @@ body {
 
 .vertical-center{
   padding-bottom: 2rem;
+}
+
+.margin-bot{ 
+  margin-bottom: 1rem;
+  width: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }

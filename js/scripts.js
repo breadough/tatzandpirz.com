@@ -56,22 +56,11 @@ window.addEventListener('DOMContentLoaded', event => {
 
 function submitToAPI(e) {
     e.preventDefault();
-    var URL = "https://k3qot3apb4.execute-api.us-east-2.amazonaws.com/Production/contactus";
+    var URL = "https://x.x-x.us-east-2.amazonaws.com/Production/contactus";
 
-         var Namere = /[A-Za-z]{1}[A-Za-z]/;
-         if (!Namere.test($("#inputName").val())) {
-                      alert ("Please enter a name");
-             return;
-         }
-         var mobilere = /[0-9]{11,12}$/;
-         if (!mobilere.test($("#inputPhone").val())) {
-             alert ("Please check your mobile number");
-             return;
-         }
-         if ($("#inputDate").val()=="") {
-             alert ("Please select a date");
-             return;
-         }
+    if(function_validate()){
+        return;
+    }
 
     var name = $("#inputName").val();
     var phone = $("#inputPhone").val();
@@ -86,7 +75,7 @@ function submitToAPI(e) {
 
      $.ajax({
         type: "POST",
-        url : "https://k3qot3apb4.execute-api.us-east-2.amazonaws.com/Production/contactus",
+        url : "https://x.x-x.us-east-2.amazonaws.com/Production/contactus",
         dataType: "json",
         crossDomain: "true",
         contentType: "application/json; charset=utf-8",
@@ -95,13 +84,37 @@ function submitToAPI(e) {
         
         success: function () {
           // clear form and show a success message
-          alert("Appointment Set! We will get in touch soon. Thank you");
+          alert("Appointment Requested! We will get in touch soon. Thank you!");
           document.getElementById("contact-form").reset();
-        location.reload();
+          location.reload();
         },
         error: function () {
           // show an error message
-          alert("Error! Message was not sent. Please reload");
+          alert("Error! Message was not sent. Please try again");
           location.reload();
         }});
+}
+
+// validation
+function function_validate(){
+    var Namere = /[A-Za-z]{0}[A-Za-z]/;
+    if (!Namere.test($("#inputName").val())) {
+                 alert ("Please provide a name");
+        return true;
+    } 
+    var mobilere = /[0-9]{11,12}$/;
+    if (!mobilere.test($("#inputPhone").val())) {
+        alert ("Please check your mobile number");
+        return true;
+    }
+    if ($("#inputDate").val()=="") {
+            alert ("Please select a date");
+        return true;
+    }
+}
+
+//function to show navel aftercare
+function showNavelAftercare(){
+    document.getElementById("navalAftercare").style.display = "block";
+    document.getElementById("navalAftercareButton").style.display = "none";
 }
